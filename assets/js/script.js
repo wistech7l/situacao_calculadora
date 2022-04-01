@@ -1,42 +1,105 @@
 let visor = ''
-let valor1 = 0
-let valor2 = 0
+let valor1 = null
+let valor2 = null
+let usePonto = false
+let on_off = true
 let resultado = 0
 let labelVisor = document.querySelector('#visor')
-let operacao = ''
+let operacao = ''   
+
+function off(){
+
+}
+
+function on(){
+    
+}
+
+function mudaVisor(valor){
+    labelVisor.innerHTML= valor    
+}
 
 const reset = function(){
-    visor = ''
-    labelVisor.innerHTML= visor 
-}
-
-const clickn7 = function(){
-    visor = visor + '7'
-    labelVisor.innerHTML= visor 
-}
-
-const clickn8 = function(){
-    visor = visor + '8'
-    labelVisor.innerHTML= visor 
     
 }
 
 const clickn9 = function(){
     visor = visor + '9'
-    labelVisor.innerHTML= visor     
+    mudaVisor(visor)
+}
+
+const clickn8 = function(){
+    visor = visor + '8'
+    mudaVisor(visor)
+}
+
+const clickn7 = function(){
+    visor = visor + '7'
+    mudaVisor(visor)
+}
+
+const clickn6 = function(){
+    visor = visor + '6'
+    mudaVisor(visor)
+}
+
+const clickn5 = function(){
+    visor = visor + '5'
+    mudaVisor(visor)
+}
+
+const clickn4 = function(){
+    visor = visor + '4'
+    mudaVisor(visor)
+}
+
+const clickn3 = function(){
+    visor = visor + '3'
+    mudaVisor(visor)
+}
+
+const clickn2 = function(){
+    visor = visor + '2'
+    mudaVisor(visor)
+}
+
+const clickn1 = function(){
+    visor = visor + '1'
+    mudaVisor(visor)
+}
+
+const clickn0 = function(){
+    visor = visor + '0'
+    mudaVisor(visor)
 }
 
 const clickOpDiv = function(){
-    operacao = 'divisao'   
-    let numero = parseFloat(visor)
-    valor1 = numero
+        
+}
+const clickOpMult = () => {
+    
+}
+
+const clickOpSub = () => {
+   
+}
+
+const clickOpSom = () => {
+     
+}
+
+const ponto = () => {
+    
 }
 
 const igual = function () {
+   
+}
+
+const conta = (num1, num2) => {
+   
+} 
+
+function modoNoturno() {
     
-    switch(operacao){
-        case 'divisao':
-            
-        break
-    }
 }

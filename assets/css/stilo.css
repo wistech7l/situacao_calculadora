@@ -1,22 +1,38 @@
+:root{
+    --cor-bg-header:#f0f0f0 ; /* #252525 */
+    --cor-bg-main: #ffffff; /*# 474747*/
+    --cor-borda: #ffffff;
+    --cor-bg-calc:  #151515;
+    --cor-bg-button:  #afafaf;
+    --cor-bg-visor: #b7b7fb;
+    --cor-borda-visor: #000000;
+}
+
+
 footer,header{
+  margin: 50px 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px;
     width: 100%;
     height: 100px;
-    background-color: #252525;
+    background-color:var(--cor-bg-header) ;
 }
 
 main{
     padding: 90px 0px;
     display: flex;
     justify-content: center;
-    background-color: #474747;
+    background-color: var(--cor-bg-main);
 }
 .calc{
     width: 500px;
     height: 500px;
     padding: 30px;
-    border: 1px solid white;
+    border: 1px solid var(--cor-borda);
     border-radius: 10px;
-    background-color: #151515;
+    background-color: var(--cor-bg-calc);
 }
 
 ul{
@@ -32,20 +48,96 @@ button{
     font-size: 35px;
     font-weight: bold;
     text-align: center;
-    background-color: #afafaf;
-    border: 2px solid white;
+    background-color:var(--cor-bg-button);
+    border: 2px solid var(--cor-borda);
     border-radius: 10px;
 }
 
 .visor{
-    background-color: #b7b7fb;
+    background-color: var(--cor-bg-visor);
     width: 440px;
     height: 60px;
     text-align:end;
     font-size: 40px;
-    border: 1px solid black;
+    border: 1px solid var(--cor-borda-visor);
     border-radius: 10px;
     margin: 10px 0px;
     padding: 10px 10px;
     font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* The slider */
+.slider {
+    border-radius: 34px;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }  
+
+@media only screen and (max-width:500px) {
+
+    .visor{
+        width: 130px;
+    }
+
+    button{
+        width: 28px;
+        height: 30px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    ul{
+
+    }
+    .calc{
+        width: 200px;
+        height: 400px;
+    }
 }
