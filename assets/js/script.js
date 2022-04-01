@@ -101,5 +101,13 @@ const conta = (num1, num2) => {
 } 
 
 function modoNoturno() {
-    
+    let modoNoturno = document.querySelector('#modoNoturno').checked
+    if(modoNoturno){
+        document.documentElement.style.setProperty('--cor-bg-header', '#252525');
+        document.documentElement.style.setProperty('--cor-bg-main', '#474747');
+    }else{
+        document.documentElement.style.setProperty('--cor-bg-header', '#f0f0f0');
+        document.documentElement.style.setProperty('--cor-bg-main', '#ffffff');
+    }
 }
+modoNoturno()
